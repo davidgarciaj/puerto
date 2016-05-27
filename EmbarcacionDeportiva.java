@@ -34,6 +34,6 @@ public class EmbarcacionDeportiva extends Barco
      */
     public String toString(){
         return "---- Embarcación Deportiva ----\n" + super.toString() 
-                    + "Potencia(en cv): " + potencia + "----------------------";
+                    + "Potencia(en cv): " + potencia;
     }
 }

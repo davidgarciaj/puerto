@@ -34,6 +34,6 @@ public class Velero extends Barco
      */
     public String toString(){
         return "---- Velero ----\n" + super.toString() 
-                    + "Nº de mastiles: " + mastiles + "---------------";
+                    + "Nº de mastiles: " + mastiles;
     }
 }
