@@ -44,7 +44,7 @@ public abstract class Barco
         return matricula;
     }
     
-    public abstract int getCoeficienteDeBernua();
+    public abstract int getCoeficienteBernua();
 
     /**
      *
