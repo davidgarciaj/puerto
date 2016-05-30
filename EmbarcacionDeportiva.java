@@ -13,7 +13,7 @@ public class EmbarcacionDeportiva extends Barco
     /**
      * Constructor for objects of class Velero
      */
-    public EmbarcacionDeportiva(String matricula, float eslora, int ano, int potencia)
+    public EmbarcacionDeportiva( int potencia, String matricula, float eslora, int ano)
     {
         super(matricula, eslora, ano);
         this.potencia = potencia;

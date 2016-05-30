@@ -9,7 +9,7 @@ public class Puerto
 {
     // instance variables - replace the example below with your own
     private Alquiler[] alquileres;
-    private int NUMERO_AMARRES = 4;
+    private static final int NUMERO_AMARRES = 4;
 
     /**
      * Constructor for objects of class Puerto
@@ -26,7 +26,7 @@ public class Puerto
         boolean creado = false;
         int posicion = -1;
         int i = 0;
-        while(posicion < NUMERO_AMARRES && !creado){
+        while(i < NUMERO_AMARRES && !creado){
             if(alquileres[i] == null){
                 alquileres[i] = new Alquiler(dias, cliente, barco);
                 posicion = i;
@@ -40,10 +40,13 @@ public class Puerto
     /**
      * 
      */
-    public void verEstadoAmarre(){
+    public void verEstadoAmarres(){
         for(int i = 0; i < NUMERO_AMARRES; i++){
             if(alquileres[i] == null){
-                System.out.println(alquileres[i]);
+                System.out.println("El amarre " + i + " esta libre");
+            }
+            else{                
+                System.out.println("El amarre " + i + " esta ocupado\n" + alquileres[i]);
             }
         }
     }
@@ -52,8 +55,13 @@ public class Puerto
      * 
      */
     public float liquidarAlquiler(int posicion){
-        Alquiler alquiler = alquileres[posicion];
-        alquileres[posicion] = null;
-        return alquiler.getCosteAlquiler();
+        float valor = -1;
+        if(posicion >= 0 && posicion < 4){
+            if(alquileres[posicion] != null){
+                valor = alquileres[posicion].getCosteAlquiler();
+                alquileres[posicion] = null;
+            }
+        }
+        return valor;
     }
 }

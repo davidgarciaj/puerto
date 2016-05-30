@@ -13,9 +13,9 @@ public class Yate extends EmbarcacionDeportiva
     /**
      * Constructor for objects of class Velero
      */
-    public Yate(String matricula, float eslora, int ano, int potencia, int camarotes)
+    public Yate( int camarotes, int potencia, String matricula, float eslora, int ano)
     {
-        super(matricula, eslora, ano, potencia);
+        super(potencia, matricula, eslora, ano);
         this.camarotes = camarotes;
     }
 

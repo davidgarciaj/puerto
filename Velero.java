@@ -13,7 +13,7 @@ public class Velero extends Barco
     /**
      * Constructor for objects of class Velero
      */
-    public Velero(String matricula, float eslora, int ano, int mastiles)
+    public Velero(int mastiles, String matricula, float eslora, int ano)
     {
         super(matricula, eslora, ano);
         this.mastiles = mastiles;
